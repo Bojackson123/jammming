@@ -19,6 +19,7 @@ function SearchBar() {
                     <Playlist />
                     <div className='button'>
                     <button className='playlist-save'>SAVE TO SPOTIFY</button>
+                    <button className='playlist-clear'>CLEAR PLAYLIST</button>
                     </div>
                 </div>
             </div>
