@@ -1,0 +1,46 @@
+.spotify-auth-button {
+    position: relative;
+    background-color: black; 
+    color: white;
+    border: none;
+    width: 227.86px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: right;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.spotify-auth-button:hover {
+    background-color: #1db954;
+}
+
+.spotify-logo, .spotify-logo-hover {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 20px;
+    top: 12px;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+}
+
+.spotify-logo-hover {
+    
+    opacity: 0;
+}
+
+.spotify-logo-hover + .spotify-logo {
+    opacity: 1;
+}
+
+.spotify-auth-button:hover .spotify-logo {
+    opacity: 0;
+}
+
+.spotify-auth-button:hover .spotify-logo-hover {
+    opacity: 1;
+}

@@ -2,11 +2,16 @@ import React from 'react';
 import './SearchBar.css';
 import Tracklist from '../Tracklist/Tracklist';
 import Playlist from '../Playlist/Playlist';
+import spotifyService from '../../spotifyService';
+import SpotifyAuth from '../SpotifyAuth/SpotifyAuth';
 
 
 function SearchBar() {
     return (
         <>
+            <div className='spotify-auth'>
+                <SpotifyAuth />
+            </div>
             <div className='search'>
                 <input className='search-bar' placeholder="Enter A Song, Album, or Artist" />
                 <button className="search-button">Search</button>

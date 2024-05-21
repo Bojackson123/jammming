@@ -4,7 +4,7 @@
     height: 200px;
     justify-content: space-around;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 25px;
     padding-bottom: 50px;
 }
 
@@ -123,4 +123,11 @@
 
 .playlist-clear:hover {
     background-color: #F8C9A8;
+}
+
+.spotify-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
 }
