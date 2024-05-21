@@ -109,7 +109,24 @@ class SpotifyService {
         console.error('Error adding tracks to playlist:', error);
       }
     }
+
+    async getUserProfile() {
+        const url = 'https://api.spotify.com/v1/me';
+        const headers = {
+            'Authorization': `Bearer ${this.getAccessToken()}`
+        };
+
+        try {
+            const response = await axios.get(url, { headers });
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching user profile:', error);
+        }
+    }
+    
   }
+
+    
   
   const spotifyService = new SpotifyService();
   export default spotifyService;

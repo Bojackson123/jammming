@@ -131,3 +131,8 @@
     align-items: center;
     padding-top: 50px;
 }
+
+.welcome-message {
+    text-align: center;
+    font-size: 24px;
+}
