@@ -56,11 +56,46 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     grid-gap: 50px;
+    
 }
 
+.tracklist, .playlist {
+    overflow-y: auto;
+    scrollbar-width: none; 
+}
+
+
+.tracklist::-webkit-scrollbar, .playlist::-webkit-scrollbar {
+    width: 0px; 
+    height: 0px; 
+}
 
 @media screen and (max-width: 600px) {
     .track-containers {
         grid-template-columns: 1fr;
     }
+}
+
+
+
+
+.button {
+    text-align: center;
+}
+
+.playlist-save {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.playlist-save:hover {
+    background-color: #F8C9A8;
 }

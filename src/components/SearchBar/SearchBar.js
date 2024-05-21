@@ -12,8 +12,15 @@ function SearchBar() {
                 <button className="search-button">Search</button>
             </div>
             <div className='track-containers'>
-                <Tracklist className="tracklist"/>
-                <Playlist className="playlist"/>
+                <div className='tracklist'>
+                    <Tracklist />
+                </div>
+                <div className='playlist'>
+                    <Playlist />
+                    <div className='button'>
+                    <button className='playlist-save'>SAVE TO SPOTIFY</button>
+                    </div>
+                </div>
             </div>
         </>
        

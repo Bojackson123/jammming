@@ -2,10 +2,40 @@
     border: 5px solid black;
     background-color: black;
     opacity: 0.8;
+    
 }
 
-.playlist h2 {
+.playlist-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.playlist-title {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 0;
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: 24px;
+    padding-left: 32.5px;
+    font-weight: bold;
+    outline: none;
+    text-align: center;
+    
+}
+
+.edit-icon {
+    cursor: pointer;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.edit-icon:hover {
+    color: #F8C9A8;
 }
