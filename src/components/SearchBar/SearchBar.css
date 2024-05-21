@@ -5,6 +5,7 @@
     justify-content: space-around;
     align-items: center;
     padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .search-bar {
@@ -46,4 +47,27 @@
 .search-button:hover {
     background-color: #000;
     color: #F8C9A8;
+}
+
+.track-containers {
+    max-width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 50px;
+}
+
+.tracklist {
+    
+}
+
+.playlist {
+    
+}
+
+@media screen and (max-width: 600px) {
+    .track-containers {
+        grid-template-columns: 1fr;
+    }
 }

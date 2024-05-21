@@ -8,9 +8,12 @@ function App() {
       <Header />
       <div className='background-img'>
         <SearchBar />
+        
       </div>
     </div>
   );
 };
 
 export default App;
+
+

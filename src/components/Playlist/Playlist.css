@@ -1,0 +1,11 @@
+.playlist {
+    border: 5px solid black;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.playlist h2 {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

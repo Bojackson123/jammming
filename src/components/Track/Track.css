@@ -1,0 +1,28 @@
+.track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid azure;
+}
+
+.track-information {
+    padding-bottom: 5px;
+    color: azure;
+}
+
+.track-add {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color: azure;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.clicked {
+    color: #F8C9A8;
+}
+
