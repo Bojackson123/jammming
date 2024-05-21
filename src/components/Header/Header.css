@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+}
+
+.Header {
+    text-align: center;
+    background-color: #0a0707;
+}
+
+.Header h1 {
+    color: white;
+    padding: 20px;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #F8C9A8, #fd9964);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
