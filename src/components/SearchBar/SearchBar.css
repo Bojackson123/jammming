@@ -58,13 +58,6 @@
     grid-gap: 50px;
 }
 
-.tracklist {
-    
-}
-
-.playlist {
-    
-}
 
 @media screen and (max-width: 600px) {
     .track-containers {
