@@ -29,8 +29,8 @@ function Playlist(props) {
             />
             <i className="fas fa-edit edit-icon" onClick={handleIconClick}></i>
             </div>
-            {props.playList && props.playList.map(track => (
-                <TrackPL key={track.uri} track={track} onRemoveTrack={props.onRemoveTrack}/>
+            {props.playList && props.playList.map((track, index) => (
+                <TrackPL key={`${track.uri}-${index}`} track={track} onRemoveTrack={() => props.onRemoveTrack(track.id)}/>
             ))}
         </div>
     );

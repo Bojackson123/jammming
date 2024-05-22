@@ -7,7 +7,7 @@ function Track(props) {
 
     const handleMouseDown = () => {
         setClicked(true);
-        onRemoveTrack(props.track);
+        onRemoveTrack();
     };
 
     const handleMouseUp = () => {
@@ -16,7 +16,7 @@ function Track(props) {
 
     const handleTouchStart = () => {
         setClicked(true);
-        onRemoveTrack(props.track);
+        onRemoveTrack();
     };
 
     const handleTouchEnd = () => {

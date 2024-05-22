@@ -13,6 +13,7 @@ function SearchBar() {
     const [tracks, setTracks] = useState([]);
     const [playlist, setPlaylist] = useState([]);
     const [playlistTitle, setPlaylistTitle] = useState('Playlist');
+    const [trackIdCounter, setTrackIdCounter] = useState(0);
 
     useEffect(() => {
         const token = spotifyService.getAccessToken();
@@ -57,11 +58,13 @@ function SearchBar() {
     };
 
     const addTrackToPlaylist = (track) => {
-        setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
+        setTrackIdCounter((prevId) => prevId + 1);
+        const trackWithId = { ...track, id: trackIdCounter };
+        setPlaylist((prevPlaylist) => [...prevPlaylist, trackWithId]);
     };
 
-    const removeTrackFromPlaylist = (track) => {
-        setPlaylist((prevPlaylist) => prevPlaylist.filter(t => t !== track));
+    const removeTrackFromPlaylist = (trackId) => {
+        setPlaylist((prevPlaylist) => prevPlaylist.filter(track => track.id !== trackId));
     };
 
     const savePlaylist = async () => {
