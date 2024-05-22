@@ -24,7 +24,7 @@ function SearchBar() {
     return (
         <>
             <div className='spotify-auth'>
-                {!isAuthenticated ? (
+                {!isAuthenticated || !userName ? (
                     <SpotifyAuth />
                 ) : (
                     <div className="welcome-message">
