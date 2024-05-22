@@ -1,10 +1,12 @@
 import React, {useState, useRef} from "react";
 import "./Playlist.css";
-import Track from "../Track/Track";
+import TrackPL from "../TrackPL/TrackPL";
 
-function Playlist() {
-    const [title, setTitle] = useState("Playlist");
+function Playlist(props) {
     const inputRef = useRef(null);
+    const title = props.title;
+    const setTitle = props.onTitleChange;
+
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
@@ -27,17 +29,9 @@ function Playlist() {
             />
             <i className="fas fa-edit edit-icon" onClick={handleIconClick}></i>
             </div>
-            <Track />
-            <Track />
-            <Track />
-            <Track />
-            <Track />
-            <Track />
-            <Track />
-            <Track />
-            <Track />
-            <Track />
-            <Track />
+            {props.playList && props.playList.map(track => (
+                <TrackPL key={track.uri} track={track} onRemoveTrack={props.onRemoveTrack}/>
+            ))}
         </div>
     );
 };

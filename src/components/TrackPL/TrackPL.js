@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import './Track.css';
+import './TrackPL.css';
 
 function Track(props) {
     const [clicked, setClicked] = useState(false);
-    const onAddTrack = props.onAddTrack;
+    const onRemoveTrack = props.onRemoveTrack;
 
     const handleMouseDown = () => {
         setClicked(true);
-        onAddTrack(props.track);
+        onRemoveTrack(props.track);
     };
 
     const handleMouseUp = () => {
@@ -16,7 +16,7 @@ function Track(props) {
 
     const handleTouchStart = () => {
         setClicked(true);
-        onAddTrack(props.track);
+        onRemoveTrack(props.track);
     };
 
     const handleTouchEnd = () => {
@@ -50,7 +50,7 @@ function Track(props) {
                 onTouchEnd={handleTouchEnd}
                 onTouchCancel={handleTouchEnd}
             >
-                +
+                -
             </button>
         </div>
     );
