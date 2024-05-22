@@ -96,7 +96,7 @@ class SpotifyService {
 
       try {
           const response = await axios.post(url, data, { headers });
-          return response.data;
+          return response.data.id;;
       } catch (error) {
           if (error.response.status === 401) {
               this.authorize();
