@@ -5,7 +5,7 @@ class SpotifyService {
       this.accessToken = null;
       this.tokenExpiry = null;
       this.clientId = '0147af87650b4d0a9b79ce5996311e55';
-      this.redirectUri = 'https://jammming-sounds.vercel.app/'; 
+      this.redirectUri = 'http://localhost:3000/'//'https://jammming-sounds.vercel.app/'; 
       this.scopes = 'playlist-modify-public';
   }
 
@@ -49,8 +49,8 @@ class SpotifyService {
       window.location.href = authUrl;
   }
 
-  async search(query) {
-      const url = `https://api.spotify.com/v1/search?q=${query}&type=track,album,artist`;
+  async search(query, type) {
+      const url = `https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=${type}`;
       const headers = {
           'Authorization': `Bearer ${this.getAccessToken()}`
       };
@@ -142,6 +142,25 @@ class SpotifyService {
           console.error('Error fetching user profile:', error);
       }
   }
+
+  async getArtistTopTracks(artistId) {
+    const url = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=US`;
+    const headers = {
+        'Authorization': `Bearer ${this.getAccessToken()}`
+    };
+
+    try {
+        const response = await axios.get(url, { headers });
+        return response.data.tracks;
+    } catch (error) {
+        if (error.response.status === 401) {
+            this.authorize();
+        }
+        console.error('Error fetching artist top tracks:', error);
+    }
+}
+
+  
 }
 
     

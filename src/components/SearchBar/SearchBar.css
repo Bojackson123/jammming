@@ -6,6 +6,7 @@
     align-items: center;
     padding-top: 25px;
     padding-bottom: 50px;
+    position: relative;
 }
 
 @media screen and (max-width: 600px){
@@ -135,4 +136,61 @@
 .welcome-message {
     text-align: center;
     font-size: 24px;
+}
+
+.filters {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.filters p{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.filters p:hover {
+    cursor: pointer;
+    color: Grey;
+}
+
+.filters p.active {
+    color: #fd7e14;
+}
+
+#suggestions {
+    position: absolute;
+    top: 139px; /* Adjust this value to position the dropdown correctly below the search bar */
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 300px;
+    width: 31.6%;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 0;
+    padding-left: 0;
+    list-style: none;
+    background-color: white;
+    z-index: 1000;
+}
+
+/* Hide scrollbar for WebKit browsers */
+#suggestions::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#suggestions {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#suggestions li:hover {
+    background-color: #eee;
 }
