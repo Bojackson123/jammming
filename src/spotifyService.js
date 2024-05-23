@@ -5,7 +5,7 @@ class SpotifyService {
       this.accessToken = null;
       this.tokenExpiry = null;
       this.clientId = '0147af87650b4d0a9b79ce5996311e55';
-      this.redirectUri = 'http://localhost:3000/'//'https://jammming-sounds.vercel.app/'; 
+      this.redirectUri = 'https://jammming-sounds.vercel.app/'; 
       this.scopes = 'playlist-modify-public';
   }
 
